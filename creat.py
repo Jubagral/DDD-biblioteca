@@ -251,7 +251,9 @@ def main():
     logging.info("Configuración completada.")
     logging.info("Verifica las plantillas completas (monster.md, monster.json, item.md) desde los artefactos correspondientes.")
     logging.info("Copia los JSONs de entrada (bestia_resina.json, etc.) a input/ manualmente.")
-    logging.info(f"Ejecuta el programa con: python3 {BASE_DIR}/programa_sh.py --batch overwrite")
+    logging.info(
+        f"Ejecuta el programa con: python3 {os.path.join(BASE_DIR, 'main.py')} --batch overwrite"
+    )
 
 if __name__ == "__main__":
     main()
