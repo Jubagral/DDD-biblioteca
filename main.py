@@ -65,7 +65,10 @@ def write_json_file(file_path, data, batch_mode=None):
         logging.info(f"Archivo JSON omitido: {file_path}")
 
 def format_array(arr):
-    return ", ".join(arr) if arr else "-"
+    """Devuelve una cadena separada por comas a partir de elementos diversos."""
+    if not arr:
+        return "-"
+    return ", ".join(str(a) for a in arr)
 
 def capitalize(text):
     return str.capitalize(str(text)) if text else ""
@@ -206,6 +209,8 @@ def render_template(template_content, data):
     """Renderiza una plantilla con los datos proporcionados usando str.format."""
     try:
         flat_data = flatten_dict(data)
+        if flat_data.get('alias', '') == '':
+            flat_data['alias'] = '*'
         flat_data.update({
             'format_array': format_array,
             'capitalize': capitalize,
@@ -213,10 +218,19 @@ def render_template(template_content, data):
         })
 
         def format_with_defaults(match):
-            key = match.group(1)
-            return str(flat_data.get(key, '-'))
+            expr = match.group(1)
+            if '(' in expr and expr.endswith(')'):
+                func_name, arg_key = expr[:-1].split('(', 1)
+                func = flat_data.get(func_name)
+                arg_val = flat_data.get(arg_key, '-')
+                if callable(func):
+                    try:
+                        return str(func(arg_val))
+                    except Exception:
+                        pass
+            return str(flat_data.get(expr, '-'))
 
-        output = re.sub(r'\{([^}]+)\}', format_with_defaults, template_content)
+        output = re.sub(r'(?<!\{)\{([A-Za-z0-9_().]+)\}(?!\})', format_with_defaults, template_content)
         return output
     except Exception as e:
         logging.error(f"Error al renderizar plantilla: {e}")
