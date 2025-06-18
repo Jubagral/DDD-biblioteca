@@ -92,7 +92,14 @@ def flatten_dict(d, parent_key='', sep='.'):
         if isinstance(v, dict):
             items.extend(flatten_dict(v, new_key, sep).items())
         elif isinstance(v, list):
-            items.append((new_key, format_array(v)))
+            # Convertir listas de valores complejos a cadenas JSON para evitar errores
+            converted = []
+            for elem in v:
+                if isinstance(elem, (str, int, float, bool)):
+                    converted.append(str(elem))
+                else:
+                    converted.append(json.dumps(elem, ensure_ascii=False))
+            items.append((new_key, format_array(converted)))
         else:
             items.append((new_key, v if v is not None else '-'))
     return dict(items)
