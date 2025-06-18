@@ -31,7 +31,7 @@ FILES = {
         "monster": "monster/monster.md",
         "item": {
             "default": "item/item.md",
-            "waepon": "item/waepon.md",
+            "weapon": "item/weapon.md",
             "potion": "item/potion.md"
         },
         "pnj": "pnj/pnj.md",
@@ -139,7 +139,7 @@ Donde Duermen los Dados
 ### Detalles
 - **Rareza:** {rarity}
 - **Costo:** {mechanics.cost}""",
-    "template/item/waepon.md": """# {name}
+    "template/item/weapon.md": """# {name}
 *{type}*
 ### Descripción
 {description}

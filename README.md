@@ -11,8 +11,8 @@ Genera contenido para *D&D 5e 2025* en formato Markdown compatible con Homebrewe
 - input/                # Archivos JSON con metadatos y entidades
 - template/             # Plantillas de texto (.md, incluyendo portada.md, contraportada.md)
 - outh/                 # Archivos Markdown, JSON y JSON de referencias
-- template_map.json     # Mapeo de tipos/subtipos y portadas/contraportadas
-- programa_sh.py        # Programa principal
+- config/template_map.json     # Mapeo de tipos/subtipos y portadas/contraportadas
+- main.py               # Programa principal
 - log.txt               # Registro de procesamiento
 ```
 
@@ -32,18 +32,18 @@ Genera contenido para *D&D 5e 2025* en formato Markdown compatible con Homebrewe
    mkdir -p c:/Users/Juan/Desktop/json_j2/programa/outh
    ```
 2. Instalar `tqdm` y `colorama` (ver Requisitos).
-3. Configurar `template_map.json`, `config/type_to_folder.json`, `config/required_fields.json`, y `config/cover_settings.json`.
+3. Configurar `config/template_map.json`, `config/type_to_folder.json`, `config/required_fields.json`, y `config/cover_settings.json`.
 4. Añadir plantillas (por ejemplo, `item.md`, `potion.md`, `character.md`, `portada.md`, `contraportada.md`) a `template/`.
 5. Añadir JSON con metadatos, entidades, y opcionalmente `cover` (por ejemplo, `modulo_dragon_lance.json`) a `input/`.
 
 ## Uso
 1. Ejecutar el programa en modo interactivo:
    ```bash
-   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
+   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/main.py
    ```
    O en modo batch:
    ```bash
-   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
+   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/main.py --batch overwrite
    ```
 2. Carga todos los JSON en `input/` y verifica si sus archivos en `outh/` existen y no han cambiado.
 3. Omite los JSON sin cambios; procesa los modificados, mostrando una barra de progreso (mínimo 15 segundos por JSON).
@@ -107,10 +107,10 @@ Ejemplo:
 - `config/type_to_folder.json`: Mapea tipos a carpetas plurales.
 - `config/required_fields.json`: Define campos obligatorios por tipo.
 - `config/cover_settings.json`: Define plantillas dinámicas y valores por defecto para portada/contraportada.
-- `template_map.json`: Mapea tipos, subtipos, y portadas/contraportadas.
+- `config/template_map.json`: Mapea tipos, subtipos, y portadas/contraportadas.
 
 ## Plantillas Soportadas
-Ver `template_map.json`. Ejemplos:
+Ver `config/template_map.json`. Ejemplos:
 - `item.md`: Ítems genéricos
 - `potion.md`: Pociones
 - `character.md`: PNJ y PJ
@@ -144,8 +144,8 @@ Ver `template_map.json`. Ejemplos:
    input/
    outh/
    template/
-   template_map.json
-   programa_sh.py
+   config/template_map.json
+   main.py
    log.txt
    ```
 
@@ -166,18 +166,19 @@ Ver `template_map.json`. Ejemplos:
      - `modulo_dragon_lance.json` (artefacto `869d3be4-4a74-45a6-901a-95f355086441`).
      - `modulo_forgotten_realms.json` (artefacto `42a099c5-a8a8-4fe4-8d2f-2bd6925fa76d`).
      - `modulo_eberron.json` (artefacto `db5d4bfc-d1b4-426b-8685-0e20c1b2fa24`).
-   - En la raíz:
-     - `template_map.json` (artefacto `73982883-8bb2-4770-9a47-4e6e1898442a`).
-     - `programa_sh.py` (artefacto `d22f7ebb-40b5-4c72-b766-1d229ba1a830`).
+  - En la raíz:
+    - `main.py` (artefacto `d22f7ebb-40b5-4c72-b766-1d229ba1a830`).
+  - En `config/`:
+    - `template_map.json` (artefacto `73982883-8bb2-4770-9a47-4e6e1898442a`).
 
 4. **Ejecutar el Programa**:
    - **Modo Interactivo**:
      ```bash
-     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
+     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/main.py
      ```
    - **Modo Batch**:
      ```bash
-     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
+     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/main.py --batch overwrite
      ```
    - Verás la barra de progreso, preguntas de sobreescritura (en modo interactivo), y el resumen visual:
      ```
