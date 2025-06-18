@@ -1,0 +1,37 @@
+{
+  "monster": "monster/monster.md",
+  "item": {
+    "default": "item/item.md",
+    "weapon": "item/weapon.md",
+    "potion": "item/potion.md"
+  },
+  "pnj": "pnj/pnj.md",
+  "pj": "pj/pj.md",
+  "spell": {
+    "default": "spell/spell.md"
+  },
+  "trap": "trap/trap.md",
+  "encounter": "encounter/encounter.md",
+  "event": "event/event.md",
+  "plane": "plane/plane.md",
+  "scene": "scene/scene.md",
+  "environment": "environment/environment.md",
+  "class": "class/class.md",
+  "location": "location/location.md",
+  "adventure": "adventure/adventure.md",
+  "hook": "hook/hook.md",
+  "objective": "objective/objective.md",
+  "familiar": "familiar/familiar.md",
+  "mount": "mount/mount.md",
+  "item_pack": "item_pack/item_pack.md",
+  "covers": {
+    "adventure": {
+      "cover": "cover/adventure/portada.md",
+      "back_cover": "cover/adventure/contraportada.md"
+    },
+    "item_pack": {
+      "cover": "cover/item_pack/portada.md",
+      "back_cover": "cover/item_pack/contraportada.md"
+    }
+  }
+}

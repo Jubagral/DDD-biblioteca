@@ -1,0 +1,169 @@
+{
+  "id": "0001",
+  "seccion": "",
+  "name": "Guardia de Ra\u00edz",
+  "alias": "Guardi\u00e1n del Bosque",
+  "biomes": [
+    "bosque"
+  ],
+  "sources": [],
+  "description": "Una criatura humanoide formada por enredaderas gruesas y madera nudosas, sus ojos brillan con una suave luz verde. Se mueve con lentitud, pero su presencia infunde una sensaci\u00f3n de calma y protecci\u00f3n en el bosque.",
+  "background": "Creados por los esp\u00edritus elementales del bosque para proteger los lugares m\u00e1s sagrados, los Guardias de Ra\u00edz son los guardianes silenciosos de la flora y fauna ancestral. Solo se activan cuando el bosque est\u00e1 en peligro inminente.",
+  "type": "monster",
+  "alignment": "Neutral bueno",
+  "armor_class": {
+    "value": 17,
+    "type": "armadura natural"
+  },
+  "hit_points": {
+    "value": 120,
+    "hit_dice": "15d10",
+    "modifier": 45
+  },
+  "speed": {
+    "walk": 25,
+    "fly": 0,
+    "swim": 0,
+    "climb": 0,
+    "burrow": 0,
+    "fly_text": "",
+    "climb_text": "",
+    "swim_text": "",
+    "burrow_text": ""
+  },
+  "ability_scores": {
+    "strength": 18,
+    "strength_modifier": "+4",
+    "dexterity": 10,
+    "dexterity_modifier": "+0",
+    "constitution": 16,
+    "constitution_modifier": "+3",
+    "intelligence": 6,
+    "intelligence_modifier": "-2",
+    "wisdom": 14,
+    "wisdom_modifier": "+2",
+    "charisma": 8,
+    "charisma_modifier": "-1"
+  },
+  "saving_throws": {
+    "strength": 7,
+    "dexterity": 0,
+    "constitution": 6,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0
+  },
+  "saving_throws_formatted": "Fuerza +7, Constituci\u00f3n +6",
+  "skills": {
+    "acrobatics": 0,
+    "animal_handling": 0,
+    "arcana": 0,
+    "athletics": 0,
+    "deception": 0,
+    "history": 0,
+    "insight": 0,
+    "intimidation": 0,
+    "investigation": 0,
+    "medicine": 0,
+    "nature": 0,
+    "perception": 5,
+    "performance": 0,
+    "persuasion": 0,
+    "religion": 0,
+    "sleight_of_hand": 0,
+    "stealth": 3,
+    "survival": 0
+  },
+  "skills_formatted": "Percepci\u00f3n +5, Sigilo +3",
+  "damage_resistances": [
+    "contundente",
+    "perforante"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    "asustado",
+    "derribado"
+  ],
+  "senses": "Visi\u00f3n en la oscuridad 60 pies, Percepci\u00f3n pasiva 15",
+  "languages": "Entiende Silvano pero no puede hablar",
+  "challenge_rating": "5 (1,800 XP)",
+  "proficiency_bonus": 3,
+  "traits": [
+    {
+      "name": "Fuerza de la Naturaleza",
+      "description": "El Guardia de Ra\u00edz tiene ventaja en las tiradas de salvaci\u00f3n contra ser derribado o movido a la fuerza."
+    },
+    {
+      "name": "Forma Vegetal",
+      "description": "El Guardia de Ra\u00edz puede esconderse en follaje denso incluso si solo est\u00e1 ligeramente oculto."
+    }
+  ],
+  "traits_formatted": "**Fuerza de la Naturaleza**. El Guardia de Ra\u00edz tiene ventaja en las tiradas de salvaci\u00f3n contra ser derribado o movido a la fuerza.\n**Forma Vegetal**. El Guardia de Ra\u00edz puede esconderse en follaje denso incluso si solo est\u00e1 ligeramente oculto.",
+  "actions": [
+    {
+      "name": "Pu\u00f1etazo de Ra\u00edz",
+      "type": "Ataque cuerpo a cuerpo",
+      "attack_bonus": "+7 al ataque",
+      "range": "5 pies",
+      "target": "un objetivo",
+      "damage": [
+        {
+          "amount": "13",
+          "dice": "2d8 + 4",
+          "type": "contundente"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "Abrazo de Enredaderas (Recarga 5-6)",
+      "type": "Acci\u00f3n",
+      "attack_bonus": "",
+      "range": "15 pies",
+      "target": "cada criatura",
+      "damage": [
+        {
+          "amount": "10",
+          "dice": "3d6",
+          "type": "contundente"
+        }
+      ],
+      "description": "El Guardia de Ra\u00edz extiende enredaderas. Cada criatura a 15 pies del Guardia de Ra\u00edz debe realizar una TS de Fuerza CD 15. Si falla, queda apresada (escapar CD 15) y sufre 10 (3d6) de da\u00f1o contundente al inicio de cada uno de sus turnos. El Guardia de Ra\u00edz puede apresar hasta dos criaturas a la vez. Cuando el Guardia de Ra\u00edz se mueve, las criaturas apresadas se mueven con \u00e9l."
+    }
+  ],
+  "actions_formatted": "**Pu\u00f1etazo de Ra\u00edz**. *Ataque cuerpo a cuerpo*: +7 al ataque, alcance 5 pies, un objetivo. Impacto: 13 (2d8 + 4) de da\u00f1o contundente.\n**Abrazo de Enredaderas (Recarga 5-6)**. El Guardia de Ra\u00edz extiende enredaderas. Cada criatura a 15 pies del Guardia de Ra\u00edz debe realizar una TS de Fuerza CD 15. Si falla, queda apresada (escapar CD 15) y sufre 10 (3d6) de da\u00f1o contundente al inicio de cada uno de sus turnos. El Guardia de Ra\u00edz puede apresar hasta dos criaturas a la vez. Cuando el Guardia de Ra\u00edz se mueve, las criaturas apresadas se mueven con \u00e9l.",
+  "legendary_actions": [],
+  "legendary_actions_formatted": "",
+  "combat_tactics": "El Guardia de Ra\u00edz priorizar\u00e1 el uso de 'Abrazo de Enredaderas' para inmovilizar a los combatientes cuerpo a cuerpo, dejando a los lanzadores de conjuros expuestos. Usar\u00e1 su 'Pu\u00f1etazo de Ra\u00edz' contra cualquier enemigo cercano. Intentar\u00e1 posicionarse para proteger puntos clave del bosque. Se mover\u00e1 lentamente pero estrat\u00e9gicamente para atrapar a los enemigos.",
+  "interes": "Un guardi\u00e1n imponente que impone el control de masas y el da\u00f1o constante. Su naturaleza elemental y su resistencia a ciertos tipos de da\u00f1o lo hacen un enemigo formidable que requiere que los jugadores piensen en c\u00f3mo liberarse de sus enredaderas. Es un protector territorial, ideal para encuentros en lugares sagrados o antiguos del bosque.",
+  "para_el_dm": "### Observaciones para el DM\nEl **'Abrazo de Enredaderas' es la mec\u00e1nica principal** del Guardia de Ra\u00edz. Aseg\u00farate de recordar que puede apresar a dos criaturas. Tambi\u00e9n es crucial recordar que es **resistente a contundente y perforante**, lo que lo hace m\u00e1s duro de lo que parece. Utiliza su baja velocidad para que los jugadores puedan planificar su retirada o c\u00f3mo atacarlo desde la distancia.",
+  "gear": [],
+  "promt_image": "",
+  "image_mask": {
+    "type": "corner20",
+    "url": "https://example.com/guardia_raiz_image.png",
+    "position": {
+      "top": "50px",
+      "right": "50px",
+      "left": "",
+      "bottom": "",
+      "height": "",
+      "width": "200px",
+      "opacity": "0.8"
+    },
+    "offsetX": "10",
+    "offsetY": "10",
+    "rotation": "0"
+  },
+  "creature_number": "001",
+  "tags": [
+    "protector",
+    "elemental"
+  ],
+  "size": "Grande",
+  "environment": "bosque",
+  "legendary_points": 0,
+  "reactions": [],
+  "lair_actions": [],
+  "regional_effects": []
+}

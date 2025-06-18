@@ -1,0 +1,17 @@
+2025-06-14 22:59:30,210 - INFO - Inicio del procesamiento.
+2025-06-14 22:59:30,211 - DEBUG - Plantillas encontradas: spell/spell.md, item/item.md, item/potion.md, item/monster/monster.md, character/character.md, cover/advernure/contraportada.md, cover/advernure/portada.md
+2025-06-14 22:59:30,212 - DEBUG - Entidad cargada: MON002 como tipo 'monster'
+2025-06-14 22:59:30,212 - DEBUG - Entidad cargada: 0001 como tipo 'monster'
+2025-06-14 22:59:30,212 - INFO - Entidades cargadas desde /home/runner/workspace/input/jfftfy.json: 2
+2025-06-14 22:59:30,235 - DEBUG - Portada generada con plantilla dinámica
+2025-06-14 22:59:30,236 - DEBUG - Contraportada generada con plantilla dinámica
+2025-06-14 22:59:30,236 - DEBUG - Markdown principal generado para adventure: Forgotten Realms
+2025-06-14 22:59:30,236 - ERROR - No se encontró plantilla para tipo monster/None.
+2025-06-14 22:59:30,236 - INFO - Plantillas disponibles:
+2025-06-14 22:59:30,236 - INFO - 1. spell/spell.md
+2025-06-14 22:59:30,236 - INFO - 2. item/item.md
+2025-06-14 22:59:30,236 - INFO - 3. item/potion.md
+2025-06-14 22:59:30,237 - INFO - 4. item/monster/monster.md
+2025-06-14 22:59:30,237 - INFO - 5. character/character.md
+2025-06-14 22:59:30,237 - INFO - 6. cover/advernure/contraportada.md
+2025-06-14 22:59:30,237 - INFO - 7. cover/advernure/portada.md

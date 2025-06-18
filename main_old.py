@@ -146,7 +146,7 @@ def load_required_fields():
     """Carga los campos obligatorios por tipo desde required_fields.json."""
     default = {
         "item": ["type", "subtype", "id", "name", "rarity", "description", "mechanics.cost"],
-        "monster": [],  # Validación manejada por template/monster/monster.json
+        "monster": ["type", "id", "name", "description", "stats", "stats.challenge"],
         "pnj": ["type", "id", "name", "description", "alignment"],
         "pj": ["type", "id", "name", "description", "class", "level"],
         "spell": ["type", "id", "name", "level", "school", "description"]
@@ -177,18 +177,14 @@ def load_cover_settings():
     return load_config(COVER_SETTINGS_FILE, default)
 
 def list_templates():
-    templates = []
-    for root, _, files in os.walk(TEMPLATE_DIR):
-        for f in files:
-            if f.endswith(".md"):
-                rel_path = os.path.relpath(os.path.join(root, f), TEMPLATE_DIR)
-                templates.append(rel_path.replace(os.sep, '/'))
+    """Lista los archivos de plantillas en template/."""
+    templates = [f for f in os.listdir(TEMPLATE_DIR) if f.endswith(".md")]
     if not templates:
-        logging.error("No hay plantillas en la carpeta template ni en sus subcarpetas.")
+        logging.error("No hay plantillas en la carpeta template.")
         return []
     logging.debug(f"Plantillas encontradas: {', '.join(templates)}")
-    return templates 
-    
+    return templates
+
 def select_template(templates):
     """Permite seleccionar una plantilla por número (usado si falta mapeo)."""
     logging.info("Plantillas disponibles:")
@@ -290,66 +286,13 @@ def load_entities(json_files, template_map):
             }
             for entity_type, entity_list in data["entidades"].items():
                 for item in entity_list:
-                    if isinstance(item, dict):
-                        # Agregar el campo "type" basado en el nombre del array
-                        item_with_type = item.copy()
-
-                        # Mapear nombres de arrays a tipos de plantilla
-                        type_mapping = {
-                            "monsters": "monster",
-                            "items": "item", 
-                            "spells": "spell",
-                            "characters": "pj",  # Asumo que characters son PJs
-                            "pnjs": "pnj",
-                            "pjs": "pj",
-                            "traps": "trap",
-                            "encounters": "encounter",
-                            "events": "event",
-                            "planes": "plane",
-                            "scenes": "scene",
-                            "environments": "environment",
-                            "classes": "class",
-                            "locations": "location",
-                            "adventures": "adventure",
-                            "hooks": "hook",
-                            "objectives": "objective",
-                            "familiars": "familiar",
-                            "mounts": "mount",
-                            "item_packs": "item_pack"
-                        }
-
-                        # Usar el mapeo o el nombre del array directamente
-                        entity_type_mapped = type_mapping.get(entity_type, entity_type)
-                        item_with_type["type"] = entity_type_mapped
-
-                        # Verificar si existe plantilla para este tipo (considerando subtipos)
-                        has_template = False
-                        if entity_type_mapped in template_map:
-                            template_config = template_map[entity_type_mapped]
-                            if isinstance(template_config, dict):
-                                # Tiene subtipos, verificar si tiene default o el subtipo específico
-                                subtipo = item_with_type.get("subtype")
-                                if subtipo and subtipo in template_config:
-                                    has_template = True
-                                elif "default" in template_config:
-                                    has_template = True
-                            else:
-                                # Es una plantilla simple (string)
-                                has_template = True
-
-                        if has_template:
-                            entities.append((json_file, item_with_type, metadata))
-                            subtipo_info = f" (subtipo: {item_with_type.get('subtype', 'ninguno')})" if item_with_type.get('subtype') else ""
-                            logging.debug(f"Entidad cargada: {item_with_type.get('id', 'unknown')} como tipo '{entity_type_mapped}'{subtipo_info}")
-                        else:
-                            subtipo = item_with_type.get('subtype', 'ninguno')
-                            logging.warning(f"No hay plantilla para tipo '{entity_type_mapped}' subtipo '{subtipo}' (entidad {item.get('id', 'unknown')})")
-
+                    if isinstance(item, dict) and "type" in item:
+                        if item["type"] in template_map:
+                            entities.append((json_file, item, metadata))
             logging.info(f"Entidades cargadas desde {json_file}: {len([e for e in entities if e[0] == json_file])}")
         except Exception as e:
             logging.error(f"Error al cargar {json_file}: {e}")
     return entities
-    
 
 def sanitize_filename(name):
     """Convierte un nombre en un formato seguro para nombres de carpetas."""

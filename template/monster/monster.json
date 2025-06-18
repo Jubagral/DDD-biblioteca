@@ -1,0 +1,162 @@
+{
+  "juego": "D&D 5e 2024",
+  "entorno_de_campanya": "Dragon Lance",
+  "modul_tipe": "adventur",
+  "cover": {
+    "title": "El Módulo Épico",
+    "subtitle": "Aventuras en Krynn",
+    "author": "Juan",
+    "description": "Un viaje épico por el mundo de Dragon Lance.",
+    "credits": "Diseñado por Juan para D&D 5e 2025"
+  },
+  "entidades": 
+    {
+    "monstruos":[      
+      {
+  "id": "",
+  "seccion": "",
+  "name": "",
+  "alias": "",
+  "biomes": [],
+  "sources": [],
+  "description": "",
+  "background": "",
+  "type": "",
+  "alignment": "",
+  "armor_class": {
+    "value": 0,
+    "type": ""
+  },
+  "hit_points": {
+    "value": 0,
+    "hit_dice": "",
+    "modifier": 0
+  },
+  "speed": {
+    "walk": 0,
+    "fly": 0,
+    "swim": 0,
+    "climb": 0,
+    "burrow": 0
+  },
+  "ability_scores": {
+    "strength": 0,
+    "dexterity": 0,
+    "constitution": 0,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0
+  },
+  "saving_throws": {
+    "strength": 0,
+    "dexterity": 0,
+    "constitution": 0,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0
+  },
+  "skills": {
+    "acrobatics": 0,
+    "animal_handling": 0,
+    "arcana": 0,
+    "athletics": 0,
+    "deception": 0,
+    "history": 0,
+    "insight": 0,
+    "intimidation": 0,
+    "investigation": 0,
+    "medicine": 0,
+    "nature": 0,
+    "perception": 0,
+    "performance": 0,
+    "persuasion": 0,
+    "religion": 0,
+    "sleight_of_hand": 0,
+    "stealth": 0,
+    "survival": 0
+  },
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": "",
+  "languages": "",
+  "challenge_rating": "",
+  "proficiency_bonus": 0,
+  "traits": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "actions": [
+    {
+      "name": "",
+      "type": "",
+      "attack_bonus": "",
+      "range": "",
+      "target": "",
+      "damage": [
+        {
+          "amount": "",
+          "dice": "",
+          "type": ""
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "",
+      "cost": 0,
+      "description": ""
+    }
+  ],
+  "combat_tactics": "",
+  "interes": "",
+  "para_el_dm": "",
+  "gear": [],
+  "promt_image": "",
+  "image_mask": {
+    "type": "",
+    "url": "",
+    "position": {
+      "top": "",
+      "right": "",
+      "left": "",
+      "bottom": "",
+      "height": "",
+      "width": "",
+      "opacity": ""
+    },
+    "offsetX": "",
+    "offsetY": "",
+    "rotation": ""
+  },
+  "creature_number": "",
+  "tags": [],
+  "size": "",
+  "environment": "",
+  "legendary_points": 0,
+  "reactions": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "lair_actions": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ],
+  "regional_effects": [
+    {
+      "name": "",
+      "description": ""
+    }
+  ] 
+ }
+  ]
+}
+}

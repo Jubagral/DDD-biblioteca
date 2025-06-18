@@ -1,0 +1,19 @@
+{
+   "cover": {
+     "template": "# {title}\n<div class='phb#first-page'>\n## {subtitle}\n**Módulo para {juego}**\n*Autor*: {author}\n*Entorno*: {entorno_de_campanya}\n*Tipo*: {modul_tipe}\n</div>\n",
+     "defaults": {
+       "title": "{modul_tipe} de {entorno_de_campanya}",
+       "subtitle": "Un módulo épico para D&D 5e 2025",
+       "author": "Anónimo",
+       "juego": "D&D 5e 2025"
+     }
+   },
+   "back_cover": {
+     "template": "<div class='phb#page-cover'>\n# Contraportada\n**{title}**\n*Descripción*: {description}\n*Créditos*: {credits}\n</div>\n",
+     "defaults": {
+       "title": "{modul_tipe} de {entorno_de_campanya}",
+       "description": "Un módulo diseñado para aventuras inolvidables.",
+       "credits": "Creado con el Generador de Contenido D&D 5e"
+     }
+   }
+ }

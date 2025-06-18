@@ -1,0 +1,21 @@
+{
+  "item": "items",
+  "monster": "monsters",
+  "pnj": "pnj",
+  "pj": "pj",
+  "spell": "spells",
+  "trap": "traps",
+  "encounter": "encounters",
+  "event": "events",
+  "plane": "planes",
+  "scene": "scenes",
+  "environment": "environments",
+  "class": "classes",
+  "location": "locations",
+  "adventure": "adventures",
+  "hook": "hooks",
+  "objective": "objectives",
+  "familiar": "familiars",
+  "mount": "mounts",
+  "item_pack": "item_packs"
+}

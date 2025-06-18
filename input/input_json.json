@@ -1,0 +1,315 @@
+{
+  "juego": "D&D 5e 2024",
+  "entorno_de_campanya": "Forgotten Realms",
+  "modul_tipe": "adventure",
+  "entidades": {
+    "monsters": [
+      {
+        "id": "MON002",
+        "seccion": "",
+        "name": "Bestia de Resina",
+        "alias": "",
+        "biomes": ["pantano", "bosque"],
+        "sources": [],
+        "description": "Una criatura grande y amorfa, su cuerpo un charco burbujeante de resina pegajosa y ámbar, con pequeños trozos de corteza y hojas atrapados dentro. Posee ojos rojos que brillan ominosamente. Se mueve lentamente, dejando un rastro pegajoso y dulce, pero su tacto es corrosivo.",
+        "background": "Las Bestias de Resina son la manifestación de la corrupción de los árboles más antiguos del bosque. Nacen de la savia enferma o de lugares donde la magia oscura ha impregnado la flora. Son criaturas depredadoras que se mueven por instinto, absorbiendo materia orgánica y dejando atrás solo un residuo petrificado. Sus guaridas son fosos de resina que atraen a las presas.",
+        "type": "Aberración Grande",
+        "alignment": "Caótico malvado",
+        "armor_class": {
+          "value": 12,
+          "type": "armadura natural"
+        },
+        "hit_points": {
+          "value": 85,
+          "hit_dice": "10d10",
+          "modifier": 30
+        },
+        "speed": {
+          "walk": 20,
+          "fly": 0,
+          "swim": 0,
+          "climb": 0,
+          "burrow": 0,
+          "fly_text": "",
+          "climb_text": "",
+          "swim_text": "",
+          "burrow_text": ""
+        },
+        "ability_scores": {
+          "strength": 16,
+          "strength_modifier": "+3",
+          "dexterity": 8,
+          "dexterity_modifier": "-1",
+          "constitution": 16,
+          "constitution_modifier": "+3",
+          "intelligence": 5,
+          "intelligence_modifier": "-3",
+          "wisdom": 10,
+          "wisdom_modifier": "+0",
+          "charisma": 6,
+          "charisma_modifier": "-2"
+        },
+        "saving_throws": {
+          "strength": 0,
+          "dexterity": 0,
+          "constitution": 6,
+          "intelligence": 0,
+          "wisdom": 0,
+          "charisma": 0
+        },
+        "saving_throws_formatted": "Constitución +6",
+        "skills": {
+          "acrobatics": 0,
+          "animal_handling": 0,
+          "arcana": 0,
+          "athletics": 0,
+          "deception": 0,
+          "history": 0,
+          "insight": 0,
+          "intimidation": 0,
+          "investigation": 0,
+          "medicine": 0,
+          "nature": 0,
+          "perception": 0,
+          "performance": 0,
+          "persuasion": 0,
+          "religion": 0,
+          "sleight_of_hand": 0,
+          "stealth": 0,
+          "survival": 0
+        },
+        "skills_formatted": "",
+        "damage_resistances": ["perforante", "cortante"],
+        "damage_immunities": ["veneno", "ácido"],
+        "condition_immunities": ["cegado", "ensordecido", "exhaustion", "envenenado", "paralizado", "petrificado", "propenso"],
+        "senses": "Visión en la oscuridad 60 pies, Percepción pasiva 10",
+        "languages": "—",
+        "challenge_rating": "4 (1,100 XP)",
+        "proficiency_bonus": 2,
+        "traits": [
+          {
+            "name": "Cuerpo Pegajoso",
+            "description": "Una criatura que toca la Bestia de Resina o la golpea con un ataque cuerpo a cuerpo mientras está a 5 pies de ella debe superar una TS de Fuerza CD 14 o queda apresada por la resina. Puede usar su acción para realizar una prueba de Fuerza CD 14 para liberarse. Las criaturas apresadas sufren 5 (1d10) de daño por ácido al inicio de cada uno de sus turnos."
+          },
+          {
+            "name": "Residuos Corrosivos",
+            "description": "Al moverse, la Bestia de Resina deja un rastro de resina corrosiva que cubre un espacio de 5 pies de ancho detrás de ella. Este terreno es terreno difícil y cualquier criatura que entre o lo inicie sufre 3 (1d6) de daño por ácido. La resina dura hasta el inicio del siguiente turno de la Bestia."
+          }
+        ],
+        "traits_formatted": "**Cuerpo Pegajoso**. Una criatura que toca la Bestia de Resina o la golpea con un ataque cuerpo a cuerpo mientras está a 5 pies de ella debe superar una TS de Fuerza CD 14 o queda apresada por la resina. Puede usar su acción para realizar una prueba de Fuerza CD 14 para liberarse. Las criaturas apresadas sufren 5 (1d10) de daño por ácido al inicio de cada uno de sus turnos.\n**Residuos Corrosivos**. Al moverse, la Bestia de Resina deja un rastro de resina corrosiva que cubre un espacio de 5 pies de ancho detrás de ella. Este terreno es terreno difícil y cualquier criatura que entre o lo inicie sufre 3 (1d6) de daño por ácido. La resina dura hasta el inicio del siguiente turno de la Bestia.",
+        "actions": [
+          {
+            "name": "Golpe de Resina",
+            "type": "Ataque cuerpo a cuerpo",
+            "attack_bonus": "+5 al ataque",
+            "range": "5 pies",
+            "target": "un objetivo",
+            "damage": [
+              {
+                "amount": "10",
+                "dice": "2d6 + 3",
+                "type": "contundente"
+              },
+              {
+                "amount": "7",
+                "dice": "2d6",
+                "type": "ácido"
+              }
+            ],
+            "description": ""
+          }
+        ],
+        "actions_formatted": "**Golpe de Resina**. *Ataque cuerpo a cuerpo*: +5 al ataque, alcance 5 pies, un objetivo. Impacto: 10 (2d6 + 3) de daño contundente más 7 (2d6) de daño por ácido.",
+        "legendary_actions": [],
+        "legendary_actions_formatted": "",
+        "combat_tactics": "La Bestia de Resina se moverá lentamente, dejando su 'Rastro de Resina Corrosiva' para dificultar el movimiento de los enemigos y causar daño pasivo. Intentará usar su 'Cuerpo Pegajoso' para apresar a los combatientes cuerpo a cuerpo, aplicando daño constante por ácido. Priorizará a los enemigos que se acerquen y no dudará en usar su 'Golpe de Resina' para aplicar más daño por ácido. Su táctica es desgastar a los enemigos con daño persistente y control de movimiento.",
+        "interes": "Un enemigo lento pero con mucho control de masas y daño persistente por ácido. Su 'Cuerpo Pegajoso' y 'Residuos Corrosivos' pueden hacer que el campo de batalla sea peligroso. Ideal para encuentros en áreas pantanosas o contaminadas del bosque.",
+        "para_el_dm": "### Notas para el DM\nEl **'Cuerpo Pegajoso' con el efecto de apresar y el daño por ácido** es su mecánica principal. No olvides el **'Residuos Corrosivos'** para hacer el terreno peligroso. Es un enemigo que recompensa el posicionamiento inteligente y el uso de ataques a distancia para evitar el contacto directo. Su resistencia a perforante y cortante lo hace más difícil de lo que parece con su CA baja.",
+        "gear": [],
+        "promt_image": "",
+        "image_mask": {
+          "type": "corner20",
+          "url": "https://example.com/bestia_resina_image.png",
+          "position": {
+            "top": "50px",
+            "right": "40px",
+            "left": "",
+            "bottom": "",
+            "height": "",
+            "width": "80px",
+            "opacity": "1"
+          },
+          "offsetX": "10",
+          "offsetY": "10",
+          "rotation": "0"
+        },
+        "creature_number": "0010",
+        "tags": ["corrupción", "control de masas"],
+        "size": "Grande",
+        "environment": "pantano, bosque",
+        "legendary_points": 0,
+        "reactions": [],
+        "lair_actions": [],
+        "regional_effects": []
+      },
+      {
+        "id": "0001",
+        "seccion": "",
+        "name": "Guardia de Raíz",
+        "alias": "Guardián del Bosque",
+        "biomes": ["bosque"],
+        "sources": [],
+        "description": "Una criatura humanoide formada por enredaderas gruesas y madera nudosas, sus ojos brillan con una suave luz verde. Se mueve con lentitud, pero su presencia infunde una sensación de calma y protección en el bosque.",
+        "background": "Creados por los espíritus elementales del bosque para proteger los lugares más sagrados, los Guardias de Raíz son los guardianes silenciosos de la flora y fauna ancestral. Solo se activan cuando el bosque está en peligro inminente.",
+        "type": "Elemental Grande",
+        "alignment": "Neutral bueno",
+        "armor_class": {
+          "value": 17,
+          "type": "armadura natural"
+        },
+        "hit_points": {
+          "value": 120,
+          "hit_dice": "15d10",
+          "modifier": 45
+        },
+        "speed": {
+          "walk": 25,
+          "fly": 0,
+          "swim": 0,
+          "climb": 0,
+          "burrow": 0,
+          "fly_text": "",
+          "climb_text": "",
+          "swim_text": "",
+          "burrow_text": ""
+        },
+        "ability_scores": {
+          "strength": 18,
+          "strength_modifier": "+4",
+          "dexterity": 10,
+          "dexterity_modifier": "+0",
+          "constitution": 16,
+          "constitution_modifier": "+3",
+          "intelligence": 6,
+          "intelligence_modifier": "-2",
+          "wisdom": 14,
+          "wisdom_modifier": "+2",
+          "charisma": 8,
+          "charisma_modifier": "-1"
+        },
+        "saving_throws": {
+          "strength": 7,
+          "dexterity": 0,
+          "constitution": 6,
+          "intelligence": 0,
+          "wisdom": 0,
+          "charisma": 0
+        },
+        "saving_throws_formatted": "Fuerza +7, Constitución +6",
+        "skills": {
+          "acrobatics": 0,
+          "animal_handling": 0,
+          "arcana": 0,
+          "athletics": 0,
+          "deception": 0,
+          "history": 0,
+          "insight": 0,
+          "intimidation": 0,
+          "investigation": 0,
+          "medicine": 0,
+          "nature": 0,
+          "perception": 5,
+          "performance": 0,
+          "persuasion": 0,
+          "religion": 0,
+          "sleight_of_hand": 0,
+          "stealth": 3,
+          "survival": 0
+        },
+        "skills_formatted": "Percepción +5, Sigilo +3",
+        "damage_resistances": ["contundente", "perforante"],
+        "damage_immunities": [],
+        "condition_immunities": ["asustado", "derribado"],
+        "senses": "Visión en la oscuridad 60 pies, Percepción pasiva 15",
+        "languages": "Entiende Silvano pero no puede hablar",
+        "challenge_rating": "5 (1,800 XP)",
+        "proficiency_bonus": 3,
+        "traits": [
+          {
+            "name": "Fuerza de la Naturaleza",
+            "description": "El Guardia de Raíz tiene ventaja en las tiradas de salvación contra ser derribado o movido a la fuerza."
+          },
+          {
+            "name": "Forma Vegetal",
+            "description": "El Guardia de Raíz puede esconderse en follaje denso incluso si solo está ligeramente oculto."
+          }
+        ],
+        "traits_formatted": "**Fuerza de la Naturaleza**. El Guardia de Raíz tiene ventaja en las tiradas de salvación contra ser derribado o movido a la fuerza.\n**Forma Vegetal**. El Guardia de Raíz puede esconderse en follaje denso incluso si solo está ligeramente oculto.",
+        "actions": [
+          {
+            "name": "Puñetazo de Raíz",
+            "type": "Ataque cuerpo a cuerpo",
+            "attack_bonus": "+7 al ataque",
+            "range": "5 pies",
+            "target": "un objetivo",
+            "damage": [
+              {
+                "amount": "13",
+                "dice": "2d8 + 4",
+                "type": "contundente"
+              }
+            ],
+            "description": ""
+          },
+          {
+            "name": "Abrazo de Enredaderas (Recarga 5-6)",
+            "type": "Acción",
+            "attack_bonus": "",
+            "range": "15 pies",
+            "target": "cada criatura",
+            "damage": [
+              {
+                "amount": "10",
+                "dice": "3d6",
+                "type": "contundente"
+              }
+            ],
+            "description": "El Guardia de Raíz extiende enredaderas. Cada criatura a 15 pies del Guardia de Raíz debe realizar una TS de Fuerza CD 15. Si falla, queda apresada (escapar CD 15) y sufre 10 (3d6) de daño contundente al inicio de cada uno de sus turnos. El Guardia de Raíz puede apresar hasta dos criaturas a la vez. Cuando el Guardia de Raíz se mueve, las criaturas apresadas se mueven con él."
+          }
+        ],
+        "actions_formatted": "**Puñetazo de Raíz**. *Ataque cuerpo a cuerpo*: +7 al ataque, alcance 5 pies, un objetivo. Impacto: 13 (2d8 + 4) de daño contundente.\n**Abrazo de Enredaderas (Recarga 5-6)**. El Guardia de Raíz extiende enredaderas. Cada criatura a 15 pies del Guardia de Raíz debe realizar una TS de Fuerza CD 15. Si falla, queda apresada (escapar CD 15) y sufre 10 (3d6) de daño contundente al inicio de cada uno de sus turnos. El Guardia de Raíz puede apresar hasta dos criaturas a la vez. Cuando el Guardia de Raíz se mueve, las criaturas apresadas se mueven con él.",
+        "legendary_actions": [],
+        "legendary_actions_formatted": "",
+        "combat_tactics": "El Guardia de Raíz priorizará el uso de 'Abrazo de Enredaderas' para inmovilizar a los combatientes cuerpo a cuerpo, dejando a los lanzadores de conjuros expuestos. Usará su 'Puñetazo de Raíz' contra cualquier enemigo cercano. Intentará posicionarse para proteger puntos clave del bosque. Se moverá lentamente pero estratégicamente para atrapar a los enemigos.",
+        "interes": "Un guardián imponente que impone el control de masas y el daño constante. Su naturaleza elemental y su resistencia a ciertos tipos de daño lo hacen un enemigo formidable que requiere que los jugadores piensen en cómo liberarse de sus enredaderas. Es un protector territorial, ideal para encuentros en lugares sagrados o antiguos del bosque.",
+        "para_el_dm": "### Observaciones para el DM\nEl **'Abrazo de Enredaderas' es la mecánica principal** del Guardia de Raíz. Asegúrate de recordar que puede apresar a dos criaturas. También es crucial recordar que es **resistente a contundente y perforante**, lo que lo hace más duro de lo que parece. Utiliza su baja velocidad para que los jugadores puedan planificar su retirada o cómo atacarlo desde la distancia.",
+        "gear": [],
+        "promt_image": "",
+        "image_mask": {
+          "type": "corner20",
+          "url": "https://example.com/guardia_raiz_image.png",
+          "position": {
+            "top": "50px",
+            "right": "50px",
+            "left": "",
+            "bottom": "",
+            "height": "",
+            "width": "200px",
+            "opacity": "0.8"
+          },
+          "offsetX": "10",
+          "offsetY": "10",
+          "rotation": "0"
+        },
+        "creature_number": "001",
+        "tags": ["protector", "elemental"],
+        "size": "Grande",
+        "environment": "bosque",
+        "legendary_points": 0,
+        "reactions": [],
+        "lair_actions": [],
+        "regional_effects": []
+      }
+    ]
+  }
+}

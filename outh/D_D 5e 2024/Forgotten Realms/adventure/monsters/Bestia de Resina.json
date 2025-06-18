@@ -1,0 +1,168 @@
+{
+  "id": "MON002",
+  "seccion": "",
+  "name": "Bestia de Resina",
+  "alias": "",
+  "biomes": [
+    "pantano",
+    "bosque"
+  ],
+  "sources": [],
+  "description": "Una criatura grande y amorfa, su cuerpo un charco burbujeante de resina pegajosa y \u00e1mbar, con peque\u00f1os trozos de corteza y hojas atrapados dentro. Posee ojos rojos que brillan ominosamente. Se mueve lentamente, dejando un rastro pegajoso y dulce, pero su tacto es corrosivo.",
+  "background": "Las Bestias de Resina son la manifestaci\u00f3n de la corrupci\u00f3n de los \u00e1rboles m\u00e1s antiguos del bosque. Nacen de la savia enferma o de lugares donde la magia oscura ha impregnado la flora. Son criaturas depredadoras que se mueven por instinto, absorbiendo materia org\u00e1nica y dejando atr\u00e1s solo un residuo petrificado. Sus guaridas son fosos de resina que atraen a las presas.",
+  "type": "monster",
+  "alignment": "Ca\u00f3tico malvado",
+  "armor_class": {
+    "value": 12,
+    "type": "armadura natural"
+  },
+  "hit_points": {
+    "value": 85,
+    "hit_dice": "10d10",
+    "modifier": 30
+  },
+  "speed": {
+    "walk": 20,
+    "fly": 0,
+    "swim": 0,
+    "climb": 0,
+    "burrow": 0,
+    "fly_text": "",
+    "climb_text": "",
+    "swim_text": "",
+    "burrow_text": ""
+  },
+  "ability_scores": {
+    "strength": 16,
+    "strength_modifier": "+3",
+    "dexterity": 8,
+    "dexterity_modifier": "-1",
+    "constitution": 16,
+    "constitution_modifier": "+3",
+    "intelligence": 5,
+    "intelligence_modifier": "-3",
+    "wisdom": 10,
+    "wisdom_modifier": "+0",
+    "charisma": 6,
+    "charisma_modifier": "-2"
+  },
+  "saving_throws": {
+    "strength": 0,
+    "dexterity": 0,
+    "constitution": 6,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0
+  },
+  "saving_throws_formatted": "Constituci\u00f3n +6",
+  "skills": {
+    "acrobatics": 0,
+    "animal_handling": 0,
+    "arcana": 0,
+    "athletics": 0,
+    "deception": 0,
+    "history": 0,
+    "insight": 0,
+    "intimidation": 0,
+    "investigation": 0,
+    "medicine": 0,
+    "nature": 0,
+    "perception": 0,
+    "performance": 0,
+    "persuasion": 0,
+    "religion": 0,
+    "sleight_of_hand": 0,
+    "stealth": 0,
+    "survival": 0
+  },
+  "skills_formatted": "",
+  "damage_resistances": [
+    "perforante",
+    "cortante"
+  ],
+  "damage_immunities": [
+    "veneno",
+    "\u00e1cido"
+  ],
+  "condition_immunities": [
+    "cegado",
+    "ensordecido",
+    "exhaustion",
+    "envenenado",
+    "paralizado",
+    "petrificado",
+    "propenso"
+  ],
+  "senses": "Visi\u00f3n en la oscuridad 60 pies, Percepci\u00f3n pasiva 10",
+  "languages": "\u2014",
+  "challenge_rating": "4 (1,100 XP)",
+  "proficiency_bonus": 2,
+  "traits": [
+    {
+      "name": "Cuerpo Pegajoso",
+      "description": "Una criatura que toca la Bestia de Resina o la golpea con un ataque cuerpo a cuerpo mientras est\u00e1 a 5 pies de ella debe superar una TS de Fuerza CD 14 o queda apresada por la resina. Puede usar su acci\u00f3n para realizar una prueba de Fuerza CD 14 para liberarse. Las criaturas apresadas sufren 5 (1d10) de da\u00f1o por \u00e1cido al inicio de cada uno de sus turnos."
+    },
+    {
+      "name": "Residuos Corrosivos",
+      "description": "Al moverse, la Bestia de Resina deja un rastro de resina corrosiva que cubre un espacio de 5 pies de ancho detr\u00e1s de ella. Este terreno es terreno dif\u00edcil y cualquier criatura que entre o lo inicie sufre 3 (1d6) de da\u00f1o por \u00e1cido. La resina dura hasta el inicio del siguiente turno de la Bestia."
+    }
+  ],
+  "traits_formatted": "**Cuerpo Pegajoso**. Una criatura que toca la Bestia de Resina o la golpea con un ataque cuerpo a cuerpo mientras est\u00e1 a 5 pies de ella debe superar una TS de Fuerza CD 14 o queda apresada por la resina. Puede usar su acci\u00f3n para realizar una prueba de Fuerza CD 14 para liberarse. Las criaturas apresadas sufren 5 (1d10) de da\u00f1o por \u00e1cido al inicio de cada uno de sus turnos.\n**Residuos Corrosivos**. Al moverse, la Bestia de Resina deja un rastro de resina corrosiva que cubre un espacio de 5 pies de ancho detr\u00e1s de ella. Este terreno es terreno dif\u00edcil y cualquier criatura que entre o lo inicie sufre 3 (1d6) de da\u00f1o por \u00e1cido. La resina dura hasta el inicio del siguiente turno de la Bestia.",
+  "actions": [
+    {
+      "name": "Golpe de Resina",
+      "type": "Ataque cuerpo a cuerpo",
+      "attack_bonus": "+5 al ataque",
+      "range": "5 pies",
+      "target": "un objetivo",
+      "damage": [
+        {
+          "amount": "10",
+          "dice": "2d6 + 3",
+          "type": "contundente"
+        },
+        {
+          "amount": "7",
+          "dice": "2d6",
+          "type": "\u00e1cido"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "actions_formatted": "**Golpe de Resina**. *Ataque cuerpo a cuerpo*: +5 al ataque, alcance 5 pies, un objetivo. Impacto: 10 (2d6 + 3) de da\u00f1o contundente m\u00e1s 7 (2d6) de da\u00f1o por \u00e1cido.",
+  "legendary_actions": [],
+  "legendary_actions_formatted": "",
+  "combat_tactics": "La Bestia de Resina se mover\u00e1 lentamente, dejando su 'Rastro de Resina Corrosiva' para dificultar el movimiento de los enemigos y causar da\u00f1o pasivo. Intentar\u00e1 usar su 'Cuerpo Pegajoso' para apresar a los combatientes cuerpo a cuerpo, aplicando da\u00f1o constante por \u00e1cido. Priorizar\u00e1 a los enemigos que se acerquen y no dudar\u00e1 en usar su 'Golpe de Resina' para aplicar m\u00e1s da\u00f1o por \u00e1cido. Su t\u00e1ctica es desgastar a los enemigos con da\u00f1o persistente y control de movimiento.",
+  "interes": "Un enemigo lento pero con mucho control de masas y da\u00f1o persistente por \u00e1cido. Su 'Cuerpo Pegajoso' y 'Residuos Corrosivos' pueden hacer que el campo de batalla sea peligroso. Ideal para encuentros en \u00e1reas pantanosas o contaminadas del bosque.",
+  "para_el_dm": "### Notas para el DM\nEl **'Cuerpo Pegajoso' con el efecto de apresar y el da\u00f1o por \u00e1cido** es su mec\u00e1nica principal. No olvides el **'Residuos Corrosivos'** para hacer el terreno peligroso. Es un enemigo que recompensa el posicionamiento inteligente y el uso de ataques a distancia para evitar el contacto directo. Su resistencia a perforante y cortante lo hace m\u00e1s dif\u00edcil de lo que parece con su CA baja.",
+  "gear": [],
+  "promt_image": "",
+  "image_mask": {
+    "type": "corner20",
+    "url": "https://example.com/bestia_resina_image.png",
+    "position": {
+      "top": "50px",
+      "right": "40px",
+      "left": "",
+      "bottom": "",
+      "height": "",
+      "width": "80px",
+      "opacity": "1"
+    },
+    "offsetX": "10",
+    "offsetY": "10",
+    "rotation": "0"
+  },
+  "creature_number": "0010",
+  "tags": [
+    "corrupci\u00f3n",
+    "control de masas"
+  ],
+  "size": "Grande",
+  "environment": "pantano, bosque",
+  "legendary_points": 0,
+  "reactions": [],
+  "lair_actions": [],
+  "regional_effects": []
+}

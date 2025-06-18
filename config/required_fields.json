@@ -1,0 +1,6 @@
+{
+  "item": ["type", "subtype", "id", "name", "rarity", "description", "mechanics.cost"],
+  "monster": [],  
+  "pnj": ["type", "id", "name", "description", "alignment"],
+  "pj": ["type", "id", "name", "description", "class", "level"]
+}
