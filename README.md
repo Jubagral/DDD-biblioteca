@@ -17,10 +17,10 @@ Genera contenido para *D&D 5e 2025* en formato Markdown compatible con Homebrewe
 ```
 
 ## Requisitos
-- Python 3.13
+- Python 3.11 o superior
 - Bibliotecas `tqdm` y `colorama`:
   ```bash
-  C:/laragon/bin/python/python-3.13/pip.exe install tqdm colorama
+  C:/laragon/bin/python/python-3.11/pip.exe install tqdm colorama
   ```
 
 ## Instalación
@@ -39,11 +39,11 @@ Genera contenido para *D&D 5e 2025* en formato Markdown compatible con Homebrewe
 ## Uso
 1. Ejecutar el programa en modo interactivo:
    ```bash
-   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
+   C:/laragon/bin/python/python-3.11/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
    ```
    O en modo batch:
    ```bash
-   C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
+   C:/laragon/bin/python/python-3.11/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
    ```
 2. Carga todos los JSON en `input/` y verifica si sus archivos en `outh/` existen y no han cambiado.
 3. Omite los JSON sin cambios; procesa los modificados, mostrando una barra de progreso (mínimo 15 segundos por JSON).
@@ -131,7 +131,7 @@ Ver `template_map.json`. Ejemplos:
 
 1. **Instalar Dependencias**:
    ```bash
-   C:/laragon/bin/python/python-3.13/pip.exe install tqdm colorama
+   C:/laragon/bin/python/python-3.11/pip.exe install tqdm colorama
    ```
 
 2. **Verificar la Estructura de Carpetas**:
@@ -173,11 +173,11 @@ Ver `template_map.json`. Ejemplos:
 4. **Ejecutar el Programa**:
    - **Modo Interactivo**:
      ```bash
-     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
+     C:/laragon/bin/python/python-3.11/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py
      ```
    - **Modo Batch**:
      ```bash
-     C:/laragon/bin/python/python-3.13/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
+     C:/laragon/bin/python/python-3.11/python.exe c:/Users/Juan/Desktop/json_j2/programa/programa_sh.py --batch overwrite
      ```
    - Verás la barra de progreso, preguntas de sobreescritura (en modo interactivo), y el resumen visual:
      ```
