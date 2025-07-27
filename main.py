@@ -48,6 +48,9 @@ def confirm_overwrite(file_path, batch_mode=None):
 
 def write_file(file_path, content, batch_mode=None):
     """Escribe un archivo solo si se permite la sobreescritura."""
+    if file_path.endswith('.md') and not content.strip():
+        logging.debug(f"Contenido vacío. No se crea {file_path}")
+        return
     if confirm_overwrite(file_path, batch_mode):
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(content)
@@ -235,7 +238,15 @@ def render_entity(entity, template_name):
         template_path = os.path.join(TEMPLATE_DIR, template_name)
         with open(template_path, 'r', encoding='utf-8') as f:
             template_content = f.read()
-        return render_template(template_content, entity)
+        if not template_content.strip():
+            logging.debug(f"Plantilla vacía: {template_path}")
+            return ""
+        rendered = render_template(template_content, entity)
+        if not rendered.strip():
+            logging.debug(
+                f"Renderizado vacío para {entity.get('id', 'unknown')} con {template_name}"
+            )
+        return rendered
     except Exception as e:
         logging.error(f"Error al renderizar {entity.get('id', 'unknown')} con {template_name}: {e}")
         raise
